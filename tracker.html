@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MANMAI FITNESS CENTRE | Fitness Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+
+        <a href="index.html">Home</a>
+        <a href="goals.html">Goals</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="tracker.html" class="active">Tracker</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="membership.html">Membership</a>
+
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="page-hero tracker-hero">
+
+        <div>
+
+            <p>TRACK YOUR JOURNEY</p>
+
+            <h1>
+                KNOW YOUR
+                <span>PROGRESS.</span>
+            </h1>
+
+            <p class="hero-description">
+                Use simple fitness tools to understand your
+                progress and stay consistent.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- BMI SECTION -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <p>FITNESS TOOL</p>
+
+            <h2>
+                BMI <span>CALCULATOR.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="tracker-layout">
+
+            <!-- CALCULATOR -->
+
+            <div class="calculator-card">
+
+                <h3>Calculate Your BMI</h3>
+
+                <p class="calculator-description">
+                    Enter your height and weight to calculate
+                    your Body Mass Index.
+                </p>
+
+
+                <div class="input-group">
+
+                    <label for="height">
+                        HEIGHT (CM)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="height"
+                        placeholder="Example: 170"
+                        min="1"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="weight">
+                        WEIGHT (KG)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="weight"
+                        placeholder="Example: 65"
+                        min="1"
+                    >
+
+                </div>
+
+
+                <button
+                    class="btn primary-btn"
+                    onclick="calculateBMI()">
+
+                    CALCULATE BMI
+
+                </button>
+
+
+                <div
+                    class="bmi-result"
+                    id="bmiResult">
+
+                    <p>YOUR RESULT</p>
+
+                    <h2 id="bmiValue">--</h2>
+
+                    <span id="bmiCategory">
+                        Enter your details above.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- BMI INFORMATION -->
+
+            <div class="bmi-info-card">
+
+                <p class="small-title">
+                    UNDERSTANDING BMI
+                </p>
+
+                <h3>
+                    A SIMPLE
+                    <span>SCREENING TOOL.</span>
+                </h3>
+
+                <p>
+                    BMI compares weight with height and can be
+                    used as a general screening measure.
+                </p>
+
+                <div class="bmi-scale">
+
+                    <div>
+                        <span>Below 18.5</span>
+                        <strong>Lower range</strong>
+                    </div>
+
+                    <div>
+                        <span>18.5 – 24.9</span>
+                        <strong>Healthy range</strong>
+                    </div>
+
+                    <div>
+                        <span>25 – 29.9</span>
+                        <strong>Higher range</strong>
+                    </div>
+
+                    <div>
+                        <span>30+</span>
+                        <strong>Higher range</strong>
+                    </div>
+
+                </div>
+
+                <p class="tracker-note">
+                    BMI is only a general screening measure and
+                    does not diagnose health conditions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DAILY PROGRESS -->
+
+    <section class="progress-section">
+
+        <div class="section-heading">
+
+            <p>DAILY ACTIVITY</p>
+
+            <h2>
+                TODAY'S
+                <span>PROGRESS.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="progress-grid">
+
+
+            <!-- WORKOUT -->
+
+            <div class="progress-card">
+
+                <div class="progress-top">
+
+                    <div>
+                        <span class="progress-icon">💪</span>
+
+                        <h3>Workout</h3>
+                    </div>
+
+                    <strong id="workoutPercent">
+                        60%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="workoutBar"
+                        style="width:60%">
+                    </div>
+
+                </div>
+
+                <button onclick="increaseProgress('workout')">
+                    + COMPLETE WORKOUT
+                </button>
+
+            </div>
+
+
+            <!-- HYDRATION -->
+
+            <div class="progress-card">
+
+                <div class="progress-top">
+
+                    <div>
+                        <span class="progress-icon">💧</span>
+
+                        <h3>Hydration</h3>
+                    </div>
+
+                    <strong id="waterPercent">
+                        50%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="waterBar"
+                        style="width:50%">
+                    </div>
+
+                </div>
+
+                <button onclick="increaseProgress('water')">
+                    + DRINK WATER
+                </button>
+
+            </div>
+
+
+            <!-- SLEEP -->
+
+            <div class="progress-card">
+
+                <div class="progress-top">
+
+                    <div>
+                        <span class="progress-icon">🌙</span>
+
+                        <h3>Sleep</h3>
+                    </div>
+
+                    <strong id="sleepPercent">
+                        70%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="sleepBar"
+                        style="width:70%">
+                    </div>
+
+                </div>
+
+                <button onclick="increaseProgress('sleep')">
+                    + REST
+                </button>
+
+            </div>
+
+
+            <!-- STEPS -->
+
+            <div class="progress-card">
+
+                <div class="progress-top">
+
+                    <div>
+                        <span class="progress-icon">👟</span>
+
+                        <h3>Steps</h3>
+                    </div>
+
+                    <strong id="stepsPercent">
+                        40%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="stepsBar"
+                        style="width:40%">
+                    </div>
+
+                </div>
+
+                <button onclick="increaseProgress('steps')">
+                    + ADD STEPS
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        FIT<span>NOVA</span>
+    </div>
+
+    <p>
+        Train smarter. Eat better. Live stronger.
+    </p>
+
+    <p class="copyright">
+        © 2026 Manmai Fitness Centre
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

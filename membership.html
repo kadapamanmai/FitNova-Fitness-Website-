@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MANMAI FITNESS CENTRE | Membership</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+
+        <a href="index.html">Home</a>
+        <a href="goals.html">Goals</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="membership.html" class="active">Membership</a>
+
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="page-hero membership-hero">
+
+        <div>
+
+            <p>JOIN THE COMMUNITY</p>
+
+            <h1>
+                INVEST IN
+                <span>YOURSELF.</span>
+            </h1>
+
+            <p class="hero-description">
+                Choose a membership that fits your fitness journey
+                and start building better habits.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRICING -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <p>MEMBERSHIP PLANS</p>
+
+            <h2>
+                FIND YOUR
+                <span>FIT.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="pricing-grid">
+
+
+            <!-- STARTER -->
+
+            <div class="pricing-card">
+
+                <p class="plan-type">
+                    STARTER
+                </p>
+
+                <h3>
+                    ₹999
+                    <span>/ MONTH</span>
+                </h3>
+
+                <p class="plan-description">
+                    Perfect for beginners starting their fitness journey.
+                </p>
+
+
+                <div class="plan-features">
+
+                    <div>✓ Gym access</div>
+                    <div>✓ Basic workout plans</div>
+                    <div>✓ Fitness tracking</div>
+                    <div>✓ Community access</div>
+
+                </div>
+
+
+                <button
+                    class="plan-btn"
+                    onclick="openMembership('Starter', '₹999 / Month')">
+
+                    CHOOSE STARTER
+
+                </button>
+
+            </div>
+
+
+            <!-- PRO -->
+
+            <div class="pricing-card popular">
+
+                <div class="popular-badge">
+                    MOST POPULAR
+                </div>
+
+                <p class="plan-type">
+                    PRO
+                </p>
+
+                <h3>
+                    ₹1,999
+                    <span>/ MONTH</span>
+                </h3>
+
+                <p class="plan-description">
+                    Designed for members who want more structure and support.
+                </p>
+
+
+                <div class="plan-features">
+
+                    <div>✓ Unlimited gym access</div>
+                    <div>✓ Personalized workout plans</div>
+                    <div>✓ Nutrition guidance</div>
+                    <div>✓ Progress tracking</div>
+                    <div>✓ Trainer support</div>
+
+                </div>
+
+
+                <button
+                    class="plan-btn"
+                    onclick="openMembership('Pro', '₹1,999 / Month')">
+
+                    CHOOSE PRO
+
+                </button>
+
+            </div>
+
+
+            <!-- ELITE -->
+
+            <div class="pricing-card">
+
+                <p class="plan-type">
+                    ELITE
+                </p>
+
+                <h3>
+                    ₹2,999
+                    <span>/ MONTH</span>
+                </h3>
+
+                <p class="plan-description">
+                    A premium experience for members seeking extra guidance.
+                </p>
+
+
+                <div class="plan-features">
+
+                    <div>✓ Unlimited gym access</div>
+                    <div>✓ Personal trainer sessions</div>
+                    <div>✓ Nutrition planning</div>
+                    <div>✓ Advanced progress tracking</div>
+                    <div>✓ Priority support</div>
+
+                </div>
+
+
+                <button
+                    class="plan-btn"
+                    onclick="openMembership('Elite', '₹2,999 / Month')">
+
+                    CHOOSE ELITE
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+
+    <section class="membership-benefits">
+
+        <div class="section-heading">
+
+            <p>WHY FITNOVA?</p>
+
+            <h2>
+                EVERYTHING YOU NEED
+                TO <span>KEEP MOVING.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="membership-benefit-grid">
+
+            <div>
+
+                <span>01</span>
+
+                <h3>Modern Equipment</h3>
+
+                <p>
+                    Access a clean and motivating training environment.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>02</span>
+
+                <h3>Expert Guidance</h3>
+
+                <p>
+                    Learn from experienced fitness professionals.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>03</span>
+
+                <h3>Fitness Tracking</h3>
+
+                <p>
+                    Keep your daily activity and fitness journey organized.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>04</span>
+
+                <h3>Supportive Community</h3>
+
+                <p>
+                    Stay motivated with people working toward their goals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- MEMBERSHIP MODAL -->
+
+<div class="modal" id="membershipModal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-modal"
+            onclick="closeMembership()">
+
+            ×
+
+        </button>
+
+
+        <p>JOIN FITNOVA</p>
+
+        <h2 id="selectedPlan">
+            Pro Membership
+        </h2>
+
+        <p id="selectedPrice"
+           class="selected-price">
+
+            ₹1,999 / Month
+
+        </p>
+
+
+        <div class="signup-form">
+
+            <div class="input-group">
+
+                <label for="memberName">
+                    FULL NAME
+                </label>
+
+                <input
+                    type="text"
+                    id="memberName"
+                    placeholder="Enter your name">
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="memberEmail">
+                    EMAIL
+                </label>
+
+                <input
+                    type="email"
+                    id="memberEmail"
+                    placeholder="Enter your email">
+
+            </div>
+
+
+            <button
+                class="btn primary-btn"
+                onclick="submitMembership()">
+
+                START MEMBERSHIP
+
+            </button>
+
+        </div>
+
+        <p
+            id="membershipMessage"
+            class="membership-message">
+        </p>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <div class="footer-logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </div>
+
+    <p>
+        Train smarter. Eat better. Live stronger.
+    </p>
+
+    <p class="copyright">
+        © 2026 Manmai Fitness Centre
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

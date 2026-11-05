@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANMAI FITNESS CENTRE | Fitness Goals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">MANMAI<span>FITNESS CENTRE</span></a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="goals.html" class="active">Goals</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="membership.html">Membership</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+
+<main>
+
+<section class="page-hero">
+    <div>
+        <p>YOUR FITNESS JOURNEY</p>
+        <h1>CHOOSE YOUR <span>GOAL.</span></h1>
+        <p class="hero-description">
+            Select a fitness goal and discover a routine that fits your journey.
+        </p>
+    </div>
+</section>
+
+
+<section class="section">
+
+    <div class="section-heading">
+        <p>FITNESS GOALS</p>
+        <h2>WHAT DO YOU WANT TO <span>ACHIEVE?</span></h2>
+    </div>
+
+    <div class="goal-grid">
+
+        <div class="goal-card" onclick="selectGoal('Strength')">
+            <div class="goal-icon">💪</div>
+            <h3>Build Strength</h3>
+            <p>Focus on resistance training and functional movements.</p>
+            <button>SELECT GOAL →</button>
+        </div>
+
+        <div class="goal-card" onclick="selectGoal('Cardio')">
+            <div class="goal-icon">🏃</div>
+            <h3>Improve Endurance</h3>
+            <p>Build cardiovascular fitness and improve stamina.</p>
+            <button>SELECT GOAL →</button>
+        </div>
+
+        <div class="goal-card" onclick="selectGoal('Flexibility')">
+            <div class="goal-icon">🧘</div>
+            <h3>Flexibility</h3>
+            <p>Improve mobility, movement quality and flexibility.</p>
+            <button>SELECT GOAL →</button>
+        </div>
+
+        <div class="goal-card" onclick="selectGoal('General Fitness')">
+            <div class="goal-icon">⚡</div>
+            <h3>General Fitness</h3>
+            <p>Create a balanced and consistent fitness routine.</p>
+            <button>SELECT GOAL →</button>
+        </div>
+
+    </div>
+
+
+    <div class="goal-result" id="goalResult">
+
+        <p>YOUR RECOMMENDATION</p>
+
+        <h2 id="selectedGoal">
+            SELECT A GOAL ABOVE
+        </h2>
+
+        <div id="goalDetails">
+            Choose a goal to see a suggested fitness focus.
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </div>
+
+    <p>Train smarter. Eat better. Live stronger.</p>
+
+    <p class="copyright">© 2026 Manmai Fitness Centre</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

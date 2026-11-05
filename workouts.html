@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANMAI FITNESS CENTRE | Workouts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="goals.html">Goals</a>
+        <a href="workouts.html" class="active">Workouts</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="membership.html">Membership</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+</header>
+
+
+<main>
+
+    <!-- PAGE HERO -->
+
+    <section class="page-hero workout-hero">
+
+        <div>
+
+            <p>TRAIN SMARTER</p>
+
+            <h1>
+                FIND YOUR <span>WORKOUT.</span>
+            </h1>
+
+            <p class="hero-description">
+                Explore workouts for strength, cardio, core,
+                legs and full-body fitness.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORKOUT SECTION -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <p>EXERCISE LIBRARY</p>
+
+            <h2>
+                MOVE WITH <span>PURPOSE.</span>
+            </h2>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="workout-filters">
+
+            <button class="filter-btn active-filter"
+                    onclick="filterWorkouts('all', this)">
+                ALL
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterWorkouts('legs', this)">
+                LEGS
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterWorkouts('arms', this)">
+                ARMS
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterWorkouts('core', this)">
+                CORE
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterWorkouts('cardio', this)">
+                CARDIO
+            </button>
+
+        </div>
+
+
+        <!-- WORKOUT CARDS -->
+
+        <div class="workout-grid">
+
+
+            <!-- CARD 1 -->
+
+            <div class="workout-card" data-category="legs">
+
+                <div class="workout-image">
+                    <img src="https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&w=900&q=80"
+                         alt="Woman doing leg workout">
+
+                    <span>LEGS</span>
+                </div>
+
+                <div class="workout-info">
+
+                    <h3>Squat Training</h3>
+
+                    <p>
+                        Build lower-body strength with controlled
+                        squat movements.
+                    </p>
+
+                    <button onclick="showWorkout('Squat Training', 'Legs', 'Beginner')">
+                        VIEW DETAILS →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="workout-card" data-category="arms">
+
+                <div class="workout-image">
+
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80"
+                         alt="Woman strength training">
+
+                    <span>ARMS</span>
+
+                </div>
+
+                <div class="workout-info">
+
+                    <h3>Strength Training</h3>
+
+                    <p>
+                        Build upper-body strength with resistance
+                        exercises.
+                    </p>
+
+                    <button onclick="showWorkout('Strength Training', 'Arms', 'Intermediate')">
+                        VIEW DETAILS →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="workout-card" data-category="cardio">
+
+                <div class="workout-image">
+
+                    <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=80"
+                         alt="Woman cardio workout">
+
+                    <span>CARDIO</span>
+
+                </div>
+
+                <div class="workout-info">
+
+                    <h3>Cardio Training</h3>
+
+                    <p>
+                        Improve cardiovascular fitness with
+                        active movement.
+                    </p>
+
+                    <button onclick="showWorkout('Cardio Training', 'Cardio', 'Beginner')">
+                        VIEW DETAILS →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+
+            <div class="workout-card" data-category="core">
+
+                <div class="workout-image">
+
+                    <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=900&q=80"
+                         alt="Woman core workout">
+
+                    <span>CORE</span>
+
+                </div>
+
+                <div class="workout-info">
+
+                    <h3>Core Training</h3>
+
+                    <p>
+                        Improve core stability and controlled
+                        movement.
+                    </p>
+
+                    <button onclick="showWorkout('Core Training', 'Core', 'Beginner')">
+                        VIEW DETAILS →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 5 -->
+
+            <div class="workout-card" data-category="legs">
+
+                <div class="workout-image">
+
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80"
+                         alt="Woman gym workout">
+
+                    <span>LEGS</span>
+
+                </div>
+
+                <div class="workout-info">
+
+                    <h3>Lower Body</h3>
+
+                    <p>
+                        A balanced lower-body workout for
+                        general fitness.
+                    </p>
+
+                    <button onclick="showWorkout('Lower Body Workout', 'Legs', 'Intermediate')">
+                        VIEW DETAILS →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 6 -->
+
+            <div class="workout-card" data-category="cardio">
+
+                <div class="workout-image">
+
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80"
+                         alt="Woman fitness training">
+
+                    <span>CARDIO</span>
+
+                </div>
+
+                <div class="workout-info">
+
+                    <h3>Full Body Cardio</h3>
+
+                    <p>
+                        Combine movement and cardio for an
+                        energetic workout.
+                    </p>
+
+                    <button onclick="showWorkout('Full Body Cardio', 'Cardio', 'Intermediate')">
+                        VIEW DETAILS →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- WORKOUT MODAL -->
+
+<div class="modal" id="workoutModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal"
+                onclick="closeWorkout()">
+            ×
+        </button>
+
+        <p>WORKOUT DETAILS</p>
+
+        <h2 id="modalWorkoutName">
+            Workout
+        </h2>
+
+        <div class="modal-details">
+
+            <div>
+                <strong>TARGET</strong>
+                <span id="modalTarget">—</span>
+            </div>
+
+            <div>
+                <strong>LEVEL</strong>
+                <span id="modalLevel">—</span>
+            </div>
+
+            <div>
+                <strong>SETS</strong>
+                <span>3</span>
+            </div>
+
+            <div>
+                <strong>REPS</strong>
+                <span>10–12</span>
+            </div>
+
+        </div>
+
+        <p class="modal-text">
+            Perform each movement with controlled technique
+            and take appropriate rest between sets.
+        </p>
+
+        <button class="btn primary-btn"
+                onclick="closeWorkout()">
+            GOT IT
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <div class="footer-logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </div>
+
+    <p>Train smarter. Eat better. Live stronger.</p>
+
+    <p class="copyright">
+        © 2026 Manmai Fitness Centre
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

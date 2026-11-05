@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MANMAI FITNESS CENTRE | Nutrition</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+
+        <a href="index.html">Home</a>
+        <a href="goals.html">Goals</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="nutrition.html" class="active">Nutrition</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="membership.html">Membership</a>
+
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="page-hero nutrition-hero">
+
+        <div>
+
+            <p>FUEL YOUR JOURNEY</p>
+
+            <h1>
+                EAT SMART.<br>
+                <span>LIVE STRONG.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover simple, balanced meal ideas to support
+                an active and healthy lifestyle.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEALS -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <p>DAILY NUTRITION</p>
+
+            <h2>
+                FUEL YOUR BODY WITH
+                <span>GOOD FOOD.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="meal-grid">
+
+
+            <!-- BREAKFAST -->
+
+            <div class="meal-card">
+
+                <div class="meal-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"
+                    alt="Healthy breakfast bowl">
+
+                    <span>BREAKFAST</span>
+
+                </div>
+
+                <div class="meal-info">
+
+                    <h3>Power Breakfast</h3>
+
+                    <p>
+                        Oats, fresh fruit, yogurt and nuts
+                        for a balanced start to the day.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LUNCH -->
+
+            <div class="meal-card">
+
+                <div class="meal-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
+                    alt="Healthy lunch">
+
+                    <span>LUNCH</span>
+
+                </div>
+
+                <div class="meal-info">
+
+                    <h3>Balanced Lunch</h3>
+
+                    <p>
+                        Whole grains, vegetables and a
+                        protein source for a balanced meal.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SNACK -->
+
+            <div class="meal-card">
+
+                <div class="meal-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80"
+                    alt="Healthy snack">
+
+                    <span>SNACK</span>
+
+                </div>
+
+                <div class="meal-info">
+
+                    <h3>Smart Snack</h3>
+
+                    <p>
+                        Fresh fruit, yogurt or a handful
+                        of nuts for a simple snack.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DINNER -->
+
+            <div class="meal-card">
+
+                <div class="meal-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80"
+                    alt="Healthy dinner">
+
+                    <span>DINNER</span>
+
+                </div>
+
+                <div class="meal-info">
+
+                    <h3>Balanced Dinner</h3>
+
+                    <p>
+                        Vegetables, whole grains and a
+                        protein source for dinner.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEAL SELECTOR -->
+
+    <section class="meal-selector-section">
+
+        <div class="section-heading">
+
+            <p>PERSONALIZE YOUR PLAN</p>
+
+            <h2>
+                CHOOSE YOUR
+                <span>FOOD STYLE.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="meal-buttons">
+
+            <button
+                class="meal-btn active-meal"
+                onclick="selectMeal('balanced', this)">
+                BALANCED
+            </button>
+
+            <button
+                class="meal-btn"
+                onclick="selectMeal('vegetarian', this)">
+                VEGETARIAN
+            </button>
+
+            <button
+                class="meal-btn"
+                onclick="selectMeal('protein', this)">
+                HIGH PROTEIN
+            </button>
+
+            <button
+                class="meal-btn"
+                onclick="selectMeal('indian', this)">
+                INDIAN INSPIRED
+            </button>
+
+        </div>
+
+
+        <div class="meal-result">
+
+            <div class="meal-result-icon">
+                🥗
+            </div>
+
+            <div>
+
+                <p>YOUR SAMPLE MEAL STYLE</p>
+
+                <h3 id="mealTitle">
+                    Balanced Meals
+                </h3>
+
+                <p id="mealDescription">
+                    A balanced combination of vegetables,
+                    whole grains, fruits and protein sources.
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="nutrition-note">
+            * These are general wellness meal ideas, not
+            personalized medical or dietary advice.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </div>
+
+    <p>
+        Train smarter. Eat better. Live stronger.
+    </p>
+
+    <p class="copyright">
+        © 2026 Manmai Fitness Centre
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

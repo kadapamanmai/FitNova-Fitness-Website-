@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MANMAI FITNESS CENTRE | Trainers</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        MANMAI<span>FITNESS CENTRE</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+
+        <a href="index.html">Home</a>
+        <a href="goals.html">Goals</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="trainers.html" class="active">Trainers</a>
+        <a href="membership.html">Membership</a>
+
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="page-hero trainers-hero">
+
+        <div>
+
+            <p>MEET YOUR COACHES</p>
+
+            <h1>
+                TRAIN WITH
+                <span>EXPERTS.</span>
+            </h1>
+
+            <p class="hero-description">
+                Get guidance from experienced fitness professionals
+                who can help you stay consistent.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRAINERS -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <p>OUR TEAM</p>
+
+            <h2>
+                YOUR FITNESS.
+                <span>OUR EXPERTISE.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="trainer-grid">
+
+
+            <!-- TRAINER 1 -->
+
+            <div class="trainer-card">
+
+                <div class="trainer-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80"
+                    alt="Fitness trainer">
+
+                </div>
+
+                <div class="trainer-info">
+
+                    <p>STRENGTH COACH</p>
+
+                    <h3>Alex Morgan</h3>
+
+                    <span>Strength • Functional Training</span>
+
+                    <button
+                        onclick="showTrainer(
+                        'Alex Morgan',
+                        'Strength Coach',
+                        'Strength training, functional movement and performance-focused workouts.'
+                        )">
+
+                        VIEW PROFILE →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRAINER 2 -->
+
+            <div class="trainer-card">
+
+                <div class="trainer-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=700&q=80"
+                    alt="Female fitness trainer">
+
+                </div>
+
+                <div class="trainer-info">
+
+                    <p>FITNESS COACH</p>
+
+                    <h3>Maya Carter</h3>
+
+                    <span>Cardio • Mobility Training</span>
+
+                    <button
+                        onclick="showTrainer(
+                        'Maya Carter',
+                        'Fitness Coach',
+                        'Cardio conditioning, mobility and balanced fitness programs.'
+                        )">
+
+                        VIEW PROFILE →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRAINER 3 -->
+
+            <div class="trainer-card">
+
+                <div class="trainer-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80"
+                    alt="Personal trainer">
+
+                </div>
+
+                <div class="trainer-info">
+
+                    <p>WELLNESS COACH</p>
+
+                    <h3>Sophia Lee</h3>
+
+                    <span>Mobility • Wellness</span>
+
+                    <button
+                        onclick="showTrainer(
+                        'Sophia Lee',
+                        'Wellness Coach',
+                        'Mobility, recovery and sustainable wellness habits.'
+                        )">
+
+                        VIEW PROFILE →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRAINER 4 -->
+
+            <div class="trainer-card">
+
+                <div class="trainer-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=700&q=80"
+                    alt="Personal fitness coach">
+
+                </div>
+
+                <div class="trainer-info">
+
+                    <p>PERFORMANCE COACH</p>
+
+                    <h3>Ryan Brooks</h3>
+
+                    <span>Performance • Conditioning</span>
+
+                    <button
+                        onclick="showTrainer(
+                        'Ryan Brooks',
+                        'Performance Coach',
+                        'Athletic conditioning, performance training and workout planning.'
+                        )">
+
+                        VIEW PROFILE →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY TRAIN WITH US -->
+
+    <section class="trainer-benefits">
+
+        <div>
+
+            <p>WHY FITNOVA?</p>
+
+            <h2>
+                MORE THAN A
+                <span>WORKOUT.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="benefit-list">
+
+            <div>
+                <strong>01</strong>
+                <span>Personal guidance</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Structured workouts</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Progress tracking</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>Supportive community</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- TRAINER MODAL -->
+
+<div class="modal" id="trainerModal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-modal"
+            onclick="closeTrainer()">
+
+            ×
+
+        </button>
+
+
+        <p>FITNOVA TRAINER</p>
+
+        <h2 id="trainerName">
+            Trainer
+        </h2>
+
+        <h4 id="trainerRole">
+            Fitness Coach
+        </h4>
+
+        <p
+            id="trainerDescription"
+            class="modal-text">
+
+            Trainer information.
+
+        </p>
+
+
+        <button
+            class="btn primary-btn"
+            onclick="closeTrainer()">
+
+            CLOSE
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <div class="footer-logo">
+        FIT<span>NOVA</span>
+    </div>
+
+    <p>
+        Train smarter. Eat better. Live stronger.
+    </p>
+
+    <p class="copyright">
+        © 2026 Manmai Fitness Centre
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
